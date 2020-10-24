@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="txtImzalananSql.Text" xml:space="preserve">
+    <value>select * from (
+select 
+  co.id, 0 as sec, efatura, co.faturano, "CO" as tip, co.tarih as faturatarihi, co.toplam-co.kdv as aratoplam, co.kdv, co.iskonto, co.toplam as geneltoplam, co.yevmiyefisno, co.unvan1, co.vergidairesi, co.vergino, eb.guid, eb.efaturasekli
+from checkoutfatura as co
+right join efaturabilgi as eb on eb.faturatipi="CO" and eb.faturaid=co.id 
+where efatura&gt;1 /*sorguco*/
+
+union all
+
+select 
+  af.id, 0 as sec, efatura, af.faturano, "AF" as tip, af.tarih as faturatarihi, af.toplam as aratoplam, af.kdv, af.iskonto, af.geneltoplam, af.yevmiyefisno, af.unvan1, af.vergidairesi, af.vergino, eb.guid, eb.efaturasekli
+from acentafatura as af
+right join efaturabilgi as eb on eb.faturatipi="AF" and eb.faturaid=af.id 
+where efatura&gt;1 /*sorguaf*/
+
+union all
+
+select 
+  sf.id, 0 as sec, efatura, sf.faturano,"SF" as tip, sf.tarih as faturatarihi, sf.toplam as aratoplam, sf.kdv, sf.iskonto, sf.geneltoplam, sf.fisno as yevmiyefisno, sf.unvan1, sf.vergidairesi, sf.vergino, eb.guid, eb.efaturasekli
+from sifatura as sf
+right join efaturabilgi as eb on eb.faturatipi="SF" and eb.faturaid=sf.id 
+where efatura&gt;1 /*sorgusi*/
+
+union all
+
+select 
+   cf.id, 0 as sec, efatura, cf.faturano,"CF" as tip, cf.tarih as faturatarihi, cf.toplam as aratoplam, cf.kdv, cf.iskonto, cf.geneltoplam, cf.fisno as yevmiyefisno, cf.unvan1, cf.vergidairesi, cf.vergino, eb.guid, eb.efaturasekli
+from carifatura as cf
+right join efaturabilgi as eb on eb.faturatipi="CF" and eb.faturaid=cf.id 
+where efatura&gt;1 /*sorgucf*/
+
+union all
+
+select 
+   adf.id, 0 as sec, efatura, adf.faturano,"AG" as tip, adf.tarih as faturatarihi, adf.aratoplam, adf.kdv, adf.iskonto, adf.geneltoplam, adf.fisno yevmiyefisno, adf.unvan1, adf.vergi_dairesi, adf.vergi_no, eb.guid, eb.efaturasekli
+from adisyonfaturasi as adf
+right join efaturabilgi as eb on eb.faturatipi="" and eb.faturaid=adf.id 
+where efatura&gt;1 /*sorguag*/
+) as f
+order by faturano desc</value>
+  </data>
+  <data name="txtImzalanacakSql.Text" xml:space="preserve">
+    <value>select * from (
+select 
+  0 as sec,id,faturano,"CO" as tip,tarih as faturatarihi,toplam-kdv as aratoplam, kdv,iskonto,toplam as geneltoplam,yevmiyefisno,unvan1,vergidairesi,vergino
+from checkoutfatura where efatura=1 /*sorguco*/
+
+union all
+
+select 
+  0 as sec,id,faturano,"AF" as tip,tarih as faturatarihi,toplam as aratoplam, kdv,iskonto, geneltoplam,yevmiyefisno,unvan1,vergidairesi,vergino
+from acentafatura where efatura=1 /*sorguaf*/
+
+union all
+
+select 
+  0 as sec,id,faturano,"SF" as tip,tarih as faturatarihi,toplam as aratoplam, kdv,iskonto,geneltoplam,fisno as yevmiyefisno,unvan1,vergidairesi,vergino
+from sifatura where efatura=1 /*sorgusi*/
+
+union all
+
+select 
+  0 as sec, id,faturano,"CF" as tip,tarih as faturatarihi,toplam as aratoplam, kdv,iskonto,geneltoplam,fisno as yevmiyefisno,unvan1,vergidairesi,vergino
+from carifatura where efatura=1 /*sorgucf*/
+
+union all
+
+select 
+  0 as sec, id,faturano,"AG" as tip,tarih as faturatarihi,aratoplam, kdv,iskonto,geneltoplam,fisno yevmiyefisno,unvan1,vergi_dairesi,vergi_no
+from adisyonfaturasi where efatura=1 /*sorguag*/
+) as f
+order by id</value>
+  </data>
+  <metadata name="pmImzalanacaklar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="pmImzalanlar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>167, 17</value>
+  </metadata>
+</root>

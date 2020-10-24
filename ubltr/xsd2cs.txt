@@ -1,0 +1,6 @@
+xsd file.xsd {/classes | /dataset} [/element:element]
+         [/language:language] [/namespace:namespace]
+         [/outputdir:directory] [URI:uri]
+And in example, whereas the C# class will be generated in the same directory as the xsd tool:
+
+xsd /c YourFile.xsd

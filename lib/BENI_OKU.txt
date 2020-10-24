@@ -1,0 +1,31 @@
+CAdES .NET API için Gerekli dll Listesi
+	
+	asn1rt   
+	log4net
+	ma3api-asn
+	ma3api-certstore
+	ma3api-certvalidation       
+	ma3api-cmssignature
+	ma3api-common
+	ma3api-crypto
+	ma3api-crypto-bouncyprovider
+	ma3api-iaik_wrapper
+	ma3api-infra
+	ma3api-managedPkcs11
+	ma3api-pkcs11net
+	ma3api-signature
+	ma3api-smartcard       
+	nunit.framework        
+	System.Data.SQLite
+
+XAdES .NET API için Gerekli dll Listesi
+
+	CAdES .NET API dll listesi
+	ma3api-xmlsignature      
+
+Mobil Ýmza için Gerekli dll Listesi
+
+	CAdES .NET API dll listesi
+	ma3api-mssclient
+	ma3api-mssclient-aveaprovider
+	ma3api-mssclient-turkcellprovider
